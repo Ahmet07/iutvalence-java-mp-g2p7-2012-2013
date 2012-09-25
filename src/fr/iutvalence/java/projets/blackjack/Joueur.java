@@ -4,6 +4,5 @@ public class Joueur
 {   
 	private string Nom;
 	
-	
-	
+
 }
