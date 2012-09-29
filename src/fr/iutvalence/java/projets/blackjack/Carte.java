@@ -7,7 +7,6 @@ package fr.iutvalence.java.projets.blackjack;
  *
  */
 public class Carte
-
 {
 	
 	
@@ -102,23 +101,28 @@ public class Carte
 	
 	
 	
-	
+	// FIXME corriger le commentaire
+	// FIXME une carte peut-elle changer de couleur ?	
 	/**
 	 * Declaration de l'entier couleur
 	 */
 	private int couleur;
-	
+
+	// FIXME une carte peut-elle changer de valeur ?
+	// FIXME corriger le commentaire
 	/**
 	 * Declaration de l'entier valeur
 	 */
 	private int valeur;
 	
+	// FIXME corriger le commentaire
+	// FIXME une carte peut-elle changer de symbole ?
 	/**
 	 * Declaration de l'entier symbole
 	 */
 	private int symbole;
 	
-	
+	// FIXME corriger le commentaire
 	/**
 	 * Composition d'une carte
 	 */
@@ -140,6 +144,7 @@ public class Carte
 	if (v == 2) return "Coeur";
 	if (v == 3) return "Pique";
 	if (v == 4) return "Trèfle";
+	// FIXME gérer les erreurs avec des exceptions
 	else return "Erreur";
 	}
 	
