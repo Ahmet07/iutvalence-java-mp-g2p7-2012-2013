@@ -148,7 +148,7 @@ public class Carte
 	else return "Erreur";
 	}
 	
-	
+	// FIME écrire un commentaire
 	public String toString()
 	{
 		String s = "Carte de couleur "+ couleurToString(this.couleur);
