@@ -97,34 +97,30 @@ public class Carte
 	 * Constante représentant la valeur  "ROI"
 	 */	
 	public final static int ROI = 13;
-	
-	
-	
-	
-	// FIXME corriger le commentaire
-	// FIXME une carte peut-elle changer de couleur ?	
-	/**
-	 * Declaration de l'entier couleur
-	 */
-	private int couleur;
 
-	// FIXME une carte peut-elle changer de valeur ?
-	// FIXME corriger le commentaire
-	/**
-	 * Declaration de l'entier valeur
-	 */
-	private int valeur;
 	
-	// FIXME corriger le commentaire
-	// FIXME une carte peut-elle changer de symbole ?
-	/**
-	 * Declaration de l'entier symbole
-	 */
-	private int symbole;
 	
-	// FIXME corriger le commentaire
+	
+	
+
 	/**
-	 * Composition d'une carte
+	 * On donne une couleur à la carte (carreau,coeur,pique ou trèfle)
+	 */
+	private static int couleur;
+
+	/**
+	 * On donne une valeur à la carte  ( 1 pour As, 2 pour DEUX ...)
+	 */
+	private static int valeur;
+
+	/**
+	 *  On donne une symbole à la carte (Roi,dame,vallet,as...)
+	 */
+	private static int symbole;
+	
+
+	/**
+	 * Une carte est composée de sa couleur c, de sa valeur v et de son symbole s.
 	 */
 	public Carte(int c, int s, int v)
 	{
@@ -148,11 +144,31 @@ public class Carte
 	else return "Erreur";
 	}
 	
+	private String symboleToString(int s)
+	{
+	if (s == 1) return "As";
+	if (s == 2) return "Deux";
+	if (s == 3) return "Trois";
+	if (s == 4) return "Quatre";
+	if (s == 5) return "Cinq";
+	if (s == 6) return "Six";
+	if (s == 7) return "Sept";
+	if (s == 8) return "Huit";
+	if (s == 9) return "Neuf";
+	if (s == 10) return "Dix";
+	if (s == 11) return "Valet";
+	if (s == 12) return "Dame";
+	if (s == 13) return "Roi";
+	
+	// FIXME gérer les erreurs avec des exceptions
+	else return "Erreur";
+	}
+	
 	// FIME écrire un commentaire
 	public String toString()
 	{
 		String s = "Carte de couleur "+ couleurToString(this.couleur);
-		s += " et de valeur " + this.symbole;
+		s += " et de symbole " + symboleToString(this.symbole);
 		return s;
 	}
 
