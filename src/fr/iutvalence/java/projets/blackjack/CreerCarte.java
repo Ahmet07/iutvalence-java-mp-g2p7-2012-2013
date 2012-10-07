@@ -1,14 +1,15 @@
+// FIXME déplacer dans un autre paquetage
+
 package fr.iutvalence.java.projets.blackjack;
 
 
-// FIXME compl�ter le commentaire
+// FIXME compléter le commentaire
 /**
  * @author Ozdemir Ahmet & Mezgueldi Samih
  *
  */
 public class CreerCarte
 {
-
 		// FIXME compléter le commentaire
 		/**
 		 * @param args

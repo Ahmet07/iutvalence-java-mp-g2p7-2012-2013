@@ -1,9 +1,8 @@
 package fr.iutvalence.java.projets.blackjack;
 
 /**
- * @author Ozdemir Ahmet & Mezgueldi Samih
- * 
  *La classe Carte permet de définir toutes les caractéristiques d'une carte à jouer
+ * @author Ozdemir Ahmet & Mezgueldi Samih
  *
  */
 public class Carte
@@ -29,7 +28,6 @@ public class Carte
 	 * Constante représentant la couleur "Trèfle"
 	 */	
 	public final static int TREFLE = 4;
-	
 	
 	
 
@@ -97,28 +95,26 @@ public class Carte
 	 * Constante représentant la valeur  "ROI"
 	 */	
 	public final static int ROI = 13;
-
-	
-	
-	
-	
-
+		
+	// FIXME réfélchir à la définition de cet attribut (statique/non statique)
 	/**
-	 * On donne une couleur à la carte (carreau,coeur,pique ou trèfle)
+	 * couleur de la carte (carreau,coeur,pique ou trèfle)
 	 */
 	private static int couleur;
 
+	// FIXME réfélchir à la définition de cet attribut (statique/non statique)
 	/**
-	 * On donne une valeur à la carte  ( 1 pour As, 2 pour DEUX ...)
+	 * Valeur de la carte  ( 1 pour As, 2 pour DEUX ...)
 	 */
 	private static int valeur;
 
+	// FIXME réfélchir à la définition de cet attribut (statique/non statique)
 	/**
-	 *  On donne une symbole à la carte (Roi,dame,vallet,as...)
+	 *  Symbole à la carte (Roi,dame,vallet,as...)
 	 */
 	private static int symbole;
 	
-
+	//FIXME corriger le commentaire (dire quel est l'état  de l'objet créé)
 	/**
 	 * Une carte est composée de sa couleur c, de sa valeur v et de son symbole s.
 	 */
@@ -130,6 +126,7 @@ public class Carte
 	}
 	
 	
+	// FIXME déplacer dans une classe Couleur (avec les constantes)
 	/**
 	 * @param v
 	 * @return La couleur de la carte par rapport à sa valeur
@@ -144,6 +141,7 @@ public class Carte
 	else return "Erreur";
 	}
 	
+	// FIXME déplacer dans une classe Symbole (avec les constantes)
 	private String symboleToString(int s)
 	{
 	if (s == 1) return "As";
