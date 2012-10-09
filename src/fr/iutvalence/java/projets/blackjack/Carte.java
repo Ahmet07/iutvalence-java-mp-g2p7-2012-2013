@@ -31,88 +31,24 @@ public class Carte
 	
 	
 
-	/**
-	 * Constante représentant la valeur "AS"
-	 */	
-	public final static int AS = 1;
-	
-	/**
-	 * Constante représentant la valeur "DEUX"
-	 */	
-	public final static int DEUX = 2;
-	
-	/**
-	 * Constante représentant la valeur "TROIS"
-	 */	
-	public final static int TROIS = 3;
-	
-	/**
-	 * Constante représentant la valeur "QUATRE"
-	 */	
-	public final static int QUATRE = 4;
-	
-	/**
-	 * Constante représentant la valeur "CINQ"
-	 */	
-	public final static int CINQ = 5;
-	
-	/**
-	 * Constante représentant la valeur "SIX"
-	 */	
-	public final static int SIX = 6;
-	
-	/**
-	 * Constante représentant la valeur "SEPT"
-	 */	
-	public final static int SEPT = 7;
-	
-	/**
-	 * Constante représentant la valeur "HUIT"
-	 */	
-	public final static int HUIT = 8;
-	
-	/**
-	 * Constante représentant la valeur  "NEUF"
-	 */	
-	public final static int NEUF = 9;
-	
-	/**
-	 * Constante représentant la valeur  "DIX"
-	 */	
-	public final static int DIX = 10;
-	
-	/**
-	 * Constante représentant la valeur  "VALLET"
-	 */	
-	public final static int VALET = 11;
-	
-	/**
-	 * Constante représentant la valeur  "DAME"
-	 */	
-	public final static int DAME = 12;
-	
-	/**
-	 * Constante représentant la valeur  "ROI"
-	 */	
-	public final static int ROI = 13;
 		
-	// FIXME réfélchir à la définition de cet attribut (statique/non statique)
+	// FIXME (FIXED) réfélchir à la définition de cet attribut (statique/non statique)
 	/**
 	 * couleur de la carte (carreau,coeur,pique ou trèfle)
 	 */
-	private static int couleur;
+	private final int couleur;
 
-	// FIXME réfélchir à la définition de cet attribut (statique/non statique)
+	// FIXME (FIXED) réfélchir à la définition de cet attribut (statique/non statique)
 	/**
 	 * Valeur de la carte  ( 1 pour As, 2 pour DEUX ...)
 	 */
-	private static int valeur;
+	private final int valeur;
 
-	// FIXME réfélchir à la définition de cet attribut (statique/non statique)
+	// FIXME (FIXED) réfélchir à la définition de cet attribut (statique/non statique)
 	/**
 	 *  Symbole à la carte (Roi,dame,vallet,as...)
 	 */
-	private static int symbole;
+	private final int symbole;
 	
 	//FIXME corriger le commentaire (dire quel est l'état  de l'objet créé)
 	/**
@@ -126,7 +62,7 @@ public class Carte
 	}
 	
 	
-	// FIXME déplacer dans une classe Couleur (avec les constantes)
+	// FIXME (FIXED) déplacer dans une classe Couleur (avec les constantes)
 	/**
 	 * @param v
 	 * @return La couleur de la carte par rapport à sa valeur
@@ -141,7 +77,7 @@ public class Carte
 	else return "Erreur";
 	}
 	
-	// FIXME déplacer dans une classe Symbole (avec les constantes)
+	// FIXME (FIXED) déplacer dans une classe Symbole (avec les constantes)
 	private String symboleToString(int s)
 	{
 	if (s == 1) return "As";
@@ -162,7 +98,10 @@ public class Carte
 	else return "Erreur";
 	}
 	
-	// FIME écrire un commentaire
+	// FIME(FIXED) écrire un commentaire
+	/**
+	 * @return Permet de créer une carte sous forme de chaine de caracteres
+	 */
 	public String toString()
 	{
 		String s = "Carte de couleur "+ couleurToString(this.couleur);

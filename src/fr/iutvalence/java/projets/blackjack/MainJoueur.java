@@ -7,14 +7,14 @@ public class MainJoueur
 	/**
 	 * Les cartes qui composent la combinaison
 	 */
-	// FIXME respecter les conventions d'écriture
-	private Carte[] main_joueur;
+	// FIXME (FIXED) respecter les conventions d'écriture
+	private Carte[] mainJoueur;
 	
 	/**
 	 * Le nombre de carte contenu dans la combinaison
 	 */
-	// FIXME respecter les conventions d'écriture
-	private int Nb_Carte_main;
+	// FIXME (FIXED) respecter les conventions d'écriture
+	private int nbCarteMain;
 	
 	// FIXME définir un constructeur
 }

@@ -1,17 +1,20 @@
 package fr.iutvalence.java.projets.blackjack;
 
-// FIXME corriger le commentaire
+// FIXME (FIXED) corriger le commentaire
 /**
- * On crée une classe Joueur avec toutes leurs caractéristiques.
+ * Création de la classe Joueur, avec un nom pour distinguer chaque joueur,
+ * un nombre de jeton intial et identique pour tous au début de
+ * la partie, ainsi que la main (les deux cartes que chaque joueur
+ * possède pour pouvoir jouer). Chaque joueur a aussi la posibilité de miser.
  */
 public class Joueur
 {   
-	// FIXME corriger le commentaire
+	// FIXME (FIXED) corriger le commentaire
 	/**
-	 * Déclaration du nom des joueurs pour distinguer chacun des joueurs.
+	 * Déclaration d'un unique nom pour identifier chaque joueur lors d'une partie
 	 */
-	// FIXME le nom du joueur change t'il en cours de partie ?
-	private String nomJoueur;
+	// FIXME (FIXED) le nom du joueur change t'il en cours de partie ?
+	private static String nomJoueur;
 	
 	/**
 	 * Nombre de jetons que le joueur possède au début de la partie.
