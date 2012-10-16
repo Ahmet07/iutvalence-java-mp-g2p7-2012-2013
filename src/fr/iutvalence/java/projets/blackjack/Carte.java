@@ -29,22 +29,17 @@ public class Carte
 	 */	
 	public final static int TREFLE = 4;
 	
-	
 
-		
-	// FIXME (FIXED) réfélchir à la définition de cet attribut (statique/non statique)
 	/**
 	 * couleur de la carte (carreau,coeur,pique ou trèfle)
 	 */
 	private final int couleur;
 
-	// FIXME (FIXED) réfélchir à la définition de cet attribut (statique/non statique)
 	/**
 	 * Valeur de la carte  ( 1 pour As, 2 pour DEUX ...)
 	 */
 	private final int valeur;
 
-	// FIXME (FIXED) réfélchir à la définition de cet attribut (statique/non statique)
 	/**
 	 *  Symbole à la carte (Roi,dame,vallet,as...)
 	 */
@@ -61,44 +56,7 @@ public class Carte
 		this.valeur  = v;
 	}
 	
-	
-	// FIXME (FIXED) déplacer dans une classe Couleur (avec les constantes)
-	/**
-	 * @param v
-	 * @return La couleur de la carte par rapport à sa valeur
-	 */
-	private String couleurToString(int v)
-	{
-	if (v == 1) return "Carreau";
-	if (v == 2) return "Coeur";
-	if (v == 3) return "Pique";
-	if (v == 4) return "Trèfle";
-	// FIXME gérer les erreurs avec des exceptions
-	else return "Erreur";
-	}
-	
-	// FIXME (FIXED) déplacer dans une classe Symbole (avec les constantes)
-	private String symboleToString(int s)
-	{
-	if (s == 1) return "As";
-	if (s == 2) return "Deux";
-	if (s == 3) return "Trois";
-	if (s == 4) return "Quatre";
-	if (s == 5) return "Cinq";
-	if (s == 6) return "Six";
-	if (s == 7) return "Sept";
-	if (s == 8) return "Huit";
-	if (s == 9) return "Neuf";
-	if (s == 10) return "Dix";
-	if (s == 11) return "Valet";
-	if (s == 12) return "Dame";
-	if (s == 13) return "Roi";
-	
-	// FIXME gérer les erreurs avec des exceptions
-	else return "Erreur";
-	}
-	
-	// FIME(FIXED) écrire un commentaire
+	// FIXME compléter/corriger le commentaire
 	/**
 	 * @return Permet de créer une carte sous forme de chaine de caracteres
 	 */

@@ -28,8 +28,12 @@ public class Couleur
 	 */
 	private final int couleur;
 	
+	// FIXME définir un constructeur
 	
-	// FIXME déplacer dans une classe Couleur (avec les constantes)
+	// FIXME définir un accesseur en lecture pour l'attribut
+	
+	// FIXME compléter/corriger le commentaire
+	// FIXME gérer les erreurs correctement (faire un choix, à discuter)
 	/**
 	 * @param v
 	 * @return La couleur de la carte par rapport à sa valeur
@@ -40,7 +44,7 @@ public class Couleur
 	if (v == 2) return "Coeur";
 	if (v == 3) return "Pique";
 	if (v == 4) return "Trèfle";
-	// FIXME gérer les erreurs avec des exceptions
+	
 	else return "Erreur";
 	}
 }

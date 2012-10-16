@@ -1,5 +1,6 @@
 package fr.iutvalence.java.projets.blackjack;
 
+// FIXME écrire un commentaire
 public class Symbole
 {
 	/**
@@ -66,16 +67,12 @@ public class Symbole
 	 * Constante représentant la valeur  "ROI"
 	 */	
 	public final static int ROI = 13;
-
-	// FIXME (FIXED) réfélchir à la définition de cet attribut (statique/non statique)
+	
 	/**
-	 *  Symbole à la carte (Roi,dame,vallet,as...)
+	 *  Symbole sur la carte (Roi, dame, valet, as...)
 	 */
 	private final int symbole;
 	
-	
-	
-	// FIXME (FIXED) réfélchir à la définition de cet attribut (statique/non statique)
 	/**
 	 * Valeur de la carte  ( 1 pour As, 2 pour DEUX ...)
 	 */
@@ -87,7 +84,7 @@ public class Symbole
 	 *  sinon, c'est que la valeur ne correspond pas au symbole,
 	 *  on renvoit donc la valeur null.
 	 */
-	// FIXME (FIXED) déplacer dans une classe Symbole (avec les constantes)
+	
 		public String toString()
 		{
 		
