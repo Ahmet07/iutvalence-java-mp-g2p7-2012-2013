@@ -30,15 +30,16 @@ public class Couleur
 	
 	// FIXME définir un constructeur
 	
+	
 	// FIXME définir un accesseur en lecture pour l'attribut
 	
-	// FIXME compléter/corriger le commentaire
-	// FIXME gérer les erreurs correctement (faire un choix, à discuter)
+	// FIXME (FIXED) compléter/corriger le commentaire
+	// FIXME (FIXED) gérer les erreurs correctement (faire un choix, à discuter)
 	/**
 	 * @param v
-	 * @return La couleur de la carte par rapport à sa valeur
+	 * La couleur de la carte par rapport à sa valeur
 	 */
-	private String couleurToString(int v)
+	private String toString(int v)
 	{
 	if (v == 1) return "Carreau";
 	if (v == 2) return "Coeur";
@@ -46,5 +47,12 @@ public class Couleur
 	if (v == 4) return "Trèfle";
 	
 	else return "Erreur";
+	}
+	
+	public Couleur (int v)
+	{
+		if ((v>0) && (v<5))
+			this.couleur = v;
+		else return "Erreur";
 	}
 }

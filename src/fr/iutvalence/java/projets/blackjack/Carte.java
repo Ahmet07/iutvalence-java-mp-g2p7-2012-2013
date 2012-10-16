@@ -56,9 +56,9 @@ public class Carte
 		this.valeur  = v;
 	}
 	
-	// FIXME compléter/corriger le commentaire
+	// FIXME (FIXED) compléter/corriger le commentaire
 	/**
-	 * @return Permet de créer une carte sous forme de chaine de caracteres
+	 *Permet de créer une carte sous forme de chaine de caracteres
 	 */
 	public String toString()
 	{

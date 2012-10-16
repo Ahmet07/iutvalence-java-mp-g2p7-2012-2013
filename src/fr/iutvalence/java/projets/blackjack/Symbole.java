@@ -1,6 +1,10 @@
 package fr.iutvalence.java.projets.blackjack;
 
-// FIXME écrire un commentaire
+/**
+ * @author ozdemira
+ *La classe symbole définie les symboles de chaque carte
+ */
+// FIXME (FIXED) écrire un commentaire
 public class Symbole
 {
 	/**
@@ -71,12 +75,26 @@ public class Symbole
 	/**
 	 *  Symbole sur la carte (Roi, dame, valet, as...)
 	 */
-	private final int symbole;
+	private final int s;
 	
 	/**
 	 * Valeur de la carte  ( 1 pour As, 2 pour DEUX ...)
 	 */
-	private final int valeur;
+	private final int v;
+	
+	
+	
+	/**
+	 * Constructeur de la classe symbole
+	 */
+	public Symbole(int s, int v)
+	{
+		this.symbole = s;
+		this.valeur = v;
+	}
+	
+	
+	
 	
 	
 	/**
@@ -84,13 +102,12 @@ public class Symbole
 	 *  sinon, c'est que la valeur ne correspond pas au symbole,
 	 *  on renvoit donc la valeur null.
 	 */
-	
 		public String toString()
-		{
-		
+		{			
 			if ((s<1) || (s>13))
 				return "La valeur de ce symbole n'est pas corecte.";
 			else
+			{
 				if ((s == 1) && (v == AS)) return "As"; 
 			    if ((s == 2) && (v == DEUX)) return "Deux";
 			    if ((s == 3) && (v == TROIS)) return "Trois"; 
@@ -104,15 +121,14 @@ public class Symbole
 		        if ((s == 11) && (v == VALET)) return "Valet"; 
 		        if ((s == 12) && (v == DAME)) return "Dame";
 		        if ((s == 13) && (v == ROI)) return "Roi"; 
-		        else return null;
+		        
+		       return null;
+			}
+		       
+		        	
+		        	
 		// FIXME (FIXED) gérer les erreurs avec des exceptions
 		}
 		
-		/**
-		 * 
-		 */
-		public RecupererValeur()
-		{
 
-		}
 }

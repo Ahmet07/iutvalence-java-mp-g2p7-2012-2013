@@ -12,20 +12,20 @@ public class Joueur
 	/**
 	 * Déclaration d'un unique nom pour identifier chaque joueur lors d'une partie
 	 */
-	// FIXME réfléchir à l'utilisation du mot-clé static (à discuter)
-	private static String nomJoueur;
+	// FIXME (FIXED) réfléchir à l'utilisation du mot-clé static (à discuter)
+	private final static String nomJoueur;
 	
 	/**
 	 * Nombre de jetons que le joueur possède au début de la partie.
 	 */
-	//FIXME renommer l'attribut
-	private int nbJeton;
+	//FIXME (FIXED) renommer l'attribut
+	private int nbJetons;
 
 	/**
 	 * Les deux cartes qui composent la main du joueur, différentes à chaque tour.
 	 */
-	// FIXME renommer l'attribut
-	private MainJoueur CarteDuJoueur;
+	// FIXME (FIXED) renommer l'attribut
+	private MainJoueur CartesJoueur;
 	
 	
 	/**
@@ -33,12 +33,15 @@ public class Joueur
 	 */
 	private int mise;
 	
-	// FIXME écrire un commentaire
+	// FIXME (FIXED) écrire un commentaire
+	/**
+	 * Un joueur est caractérisé par son nom, sa main, ses jetons et sa mise
+	 */
 	public Joueur(String nom)
 	{
 		this.nomJoueur = nom;
-		this.CarteDuJoueur = new MainJoueur(2);
-		this.nbJeton = 0;
+		this.CartesJoueur = new MainJoueur();
+		this.nbJetons = 0;
 		this.mise = 0;
 	}
 
