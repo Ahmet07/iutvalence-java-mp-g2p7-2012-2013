@@ -8,24 +8,22 @@ package fr.iutvalence.java.projets.blackjack;
  */
 public class Joueur
 {   
-	// FIXME (FIXED) corriger le commentaire
 	/**
-	 * Déclaration d'un unique nom pour identifier chaque joueur lors d'une partie
+	 * nom identifiant chaque joueur lors d'une partie
 	 */
-	// FIXME (FIXED) réfléchir à l'utilisation du mot-clé static (à discuter)
-	private final static String nomJoueur;
+	// FIXME (FIXED) cela ne peut pas être une constante
+	private String nomJoueur;
 	
 	/**
 	 * Nombre de jetons que le joueur possède au début de la partie.
 	 */
-	//FIXME (FIXED) renommer l'attribut
 	private int nbJetons;
 
 	/**
 	 * Les deux cartes qui composent la main du joueur, différentes à chaque tour.
 	 */
-	// FIXME (FIXED) renommer l'attribut
-	private MainJoueur CartesJoueur;
+	// FIXME (FIXED) respecter les conventions d'écriture
+	private MainJoueur cartesJoueur;
 	
 	
 	/**
@@ -33,14 +31,15 @@ public class Joueur
 	 */
 	private int mise;
 	
-	// FIXME (FIXED) écrire un commentaire
+	// FIXME (FIXED) corriger le commentaire (à discuter)
 	/**
-	 * Un joueur est caractérisé par son nom, sa main, ses jetons et sa mise
+	 * Instancie un objet de la classe Joueur
+	 * @param nom représente le pseudo du Joueur 
 	 */
 	public Joueur(String nom)
 	{
 		this.nomJoueur = nom;
-		this.CartesJoueur = new MainJoueur();
+		this.cartesJoueur = new MainJoueur();
 		this.nbJetons = 0;
 		this.mise = 0;
 	}

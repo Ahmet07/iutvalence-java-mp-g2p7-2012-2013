@@ -3,7 +3,7 @@
 package fr.iutvalence.java.projets.blackjack.tests;
 
 import fr.iutvalence.java.projets.blackjack.Carte;
-
+import fr.iutvalence.java.projets.blackjack.Couleur;
 import fr.iutvalence.java.projets.blackjack.Symbole;
 
 /**
@@ -17,9 +17,9 @@ public class CreerCarte
 		 * ici, on obtient "Carte de couleur Trèfle et de symbole Valet"
 		 * @param args
 		 */
-		public static void main (String[] args){
-			
-			Carte c = new Carte(Carte.TREFLE, Symbole.VALET, 11);
-			System.out.println(c.toString());
-		} 				
+		public static void main (String[] args)
+		{
+			Carte c = new Carte(,, 11);
+			System.out.println(c);
+		}
 }
