@@ -7,8 +7,7 @@ package fr.iutvalence.java.projets.blackjack;
  */
 public class Carte
 {
-	
-	
+	// FIXME supprimer les constantes, elles sont déjà définies dans Couleur
 	/**
 	 * Constante représentant la couleur "Carreau"
 	 */	
@@ -30,6 +29,7 @@ public class Carte
 	public final static int TREFLE = 4;
 	
 
+	// FIXME utiliser le type Couleur
 	/**
 	 * couleur de la carte (carreau,coeur,pique ou trèfle)
 	 */
@@ -56,7 +56,7 @@ public class Carte
 		this.valeur  = v;
 	}
 	
-	// FIXME (FIXED) compléter/corriger le commentaire
+	// FIXME  compléter/corriger le commentaire (la méthode ne crée pas de carte)
 	/**
 	 *Permet de créer une carte sous forme de chaine de caracteres
 	 */

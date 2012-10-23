@@ -1,10 +1,10 @@
 package fr.iutvalence.java.projets.blackjack;
 
 /**
+ * La classe symbole définie les symboles de chaque carte
  * @author ozdemira
- *La classe symbole définie les symboles de chaque carte
+ *
  */
-// FIXME (FIXED) écrire un commentaire
 public class Symbole
 {
 	/**
@@ -83,7 +83,7 @@ public class Symbole
 	private final int v;
 	
 	
-	
+	// FIXME compléter le commentaire
 	/**
 	 * Constructeur de la classe symbole
 	 */
@@ -92,10 +92,6 @@ public class Symbole
 		this.symbole = s;
 		this.valeur = v;
 	}
-	
-	
-	
-	
 	
 	/**
 	 *  On retourne la carte si elle existe
@@ -124,10 +120,6 @@ public class Symbole
 		        
 		       return null;
 			}
-		       
-		        	
-		        	
-		// FIXME (FIXED) gérer les erreurs avec des exceptions
 		}
 		
 
