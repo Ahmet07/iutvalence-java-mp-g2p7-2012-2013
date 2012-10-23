@@ -21,6 +21,10 @@ public class MainJoueur
 	
 	// FIXME définir un constructeur
 	
+	
+	/**
+	 * Constructeur de la classe MainJoueur
+	 */
 	public MainJoueur()
 	{
 		this.Carte = 
