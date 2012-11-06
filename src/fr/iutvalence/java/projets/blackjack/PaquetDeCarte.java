@@ -18,7 +18,7 @@ public class PaquetDeCarte
 	private int cartesRestantesDuPaquet;
 	
 	/**
-	 *Permet de choisir des cartes aléatoirement
+	 * Permet de choisir des cartes aléatoirement
 	 * afin de distribuer la main de chaque joueur en debut de partie
 	 */
 	private static Random aleatoire = new Random(System.currentTimeMillis());
@@ -36,7 +36,24 @@ public class PaquetDeCarte
 		{
 			for(v=1;v<=13;v++)
 			{
-				paquet[i++] = new Carte(v,c);			
+				if(v=1)
+				{
+					s = AS;
+				}
+				if(v=11)
+				{
+					s = VALET;
+				}
+				if(v=12)
+				{
+					s = DAME;
+				}
+				if(v=13)
+				{
+					s = ROI;
+				}
+				paquet[i] = new Carte(v,c);
+				i++;
 			}
 		}
 	}
@@ -46,11 +63,8 @@ public class PaquetDeCarte
 	 * Retourne le nombre de cartes restant dans le paquet
 	 * @return le nombre de cartes restant dans le paquet
 	 */
-	public int cartesRestantesPaquet() {
+	public int getCartesRestantesPaquet() 
+	{
 		return cartesRestantesDuPaquet;
 	}
-	
-	
-	
-	
 }

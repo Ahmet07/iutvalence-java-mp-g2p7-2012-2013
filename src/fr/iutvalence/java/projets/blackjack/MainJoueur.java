@@ -17,18 +17,14 @@ public class MainJoueur
 	// FIXME renommer l'attribut
 	private int nbCarteMain;
 	
-<<<<<<< HEAD
 	// FIXME définir un constructeur
-	
 	
 	/**
 	 * Constructeur de la classe MainJoueur
 	 */
-=======
-	// FIXME écrire un commentaire
->>>>>>> branch 'master' of https://github.com/sebastienjean/iutvalence-java-mp-g2p7-2012-2013.git
+
 	public MainJoueur()
 	{
-		this.Carte = 
+		this.Carte = ;
 	}
 }

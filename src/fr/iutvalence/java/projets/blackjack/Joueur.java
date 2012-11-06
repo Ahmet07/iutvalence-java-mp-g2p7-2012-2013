@@ -40,7 +40,7 @@ public class Joueur
 	{
 		this.nomJoueur = nom;
 		this.cartesJoueur = new MainJoueur();
-		this.nbJetons = 0;
+		this.nbJetons = 200;
 		this.mise = 0;
 	}
 
