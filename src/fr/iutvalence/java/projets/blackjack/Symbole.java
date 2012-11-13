@@ -19,39 +19,46 @@ public class Symbole
 	public final static  String[] NOM_SYMBOLE = {"AS", "2",
 	"3", "4", "5", "6", "7", "8", "9", "10", "VALET", "DAME", "ROI" };
 	
-	private final int symbole;
 	
+	// FIXME commentaire
+	private final int symbole;
+
+	// FIXME commentaire
 	private final int valeur;
 	
-	
+	// FIXME commentaire
 	public Carte(COULEUR couleur, int symbole) {
 		this.couleur = couleur;
 		this.symbole = (symbole >= 1 && symbole <= 13 ? symbole : 0);
 		this.valeur = this.symbole;
 	}
 
-	public Carte(COULEUR couleur, int rang, int valeur) {
+	// FIXME commentaire
+	// FIXME supprimer un des 2 constructeurs
+	public Carte(COULEUR couleur, int valeur) {
 		this.couleur = couleur;
 		this.symbole = (symbole >= 1 && symbole <= 13 ? symbole : 0);
 		this.valeur = valeur;
 	}
 	
+	// FIXME commentaire
 	public COULEUR getCouleur() {
 		return this.couleur;
 	}
 
+	// FIXME commentaire
 	public int getSymbole() {
 		return this.symbole;
 	}
 
+	// FIXME commentaire
 	public int getValeur() {
 		return this.valeur;
 	}
 
 	
 	
-	
-	// FIXME (FIXED) compléter le commentaire
+	// FIXME utile ?
 	/**
 	 * Instancie un objet de la classe Symbole
 	 * 
@@ -72,7 +79,7 @@ public class Symbole
 	}
 	
 	
-	
+	// FIXME commentaire
 	public String getNomCouleur() {
 		switch (this.couleur) {
 			case PIQUE:
@@ -97,6 +104,7 @@ public class Symbole
 		return Carte.NOM_SYMBOLE[this.symbole];
 	}
 
+	// FIXME commentaire
 	public String getNomComplet() {
 	    if (getSymbole()==0) return getNomSymbole();
 	    else return getNomSymbole() + " de " + getNomCouleur();

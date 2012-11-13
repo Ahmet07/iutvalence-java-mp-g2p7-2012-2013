@@ -1,4 +1,4 @@
-// FIXME (FIXED) déplacer dans un autre paquetage
+
 
 package fr.iutvalence.java.projets.blackjack.tests;
 

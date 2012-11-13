@@ -2,8 +2,7 @@ package fr.iutvalence.java.projets.blackjack;
 
 import java.util.Random;
 
-// FIXME (FIXED) renommer la classe
-public class PaquetDeCarte
+public class PaquetDeCartes
 {
 	/**
 	 * Tableau de cartes, composé au maximum de 52 cartes
@@ -13,9 +12,7 @@ public class PaquetDeCarte
 	/**
 	 * Nombre de cartes actuellement dans le paquet
 	 */
-	//
-	// FIXME (FIXED) renommer l'attribut
-	private int cartesRestantesDuPaquet;
+	private int cartesRestantes;
 	
 	/**
 	 * Permet de choisir des cartes aléatoirement
@@ -27,11 +24,11 @@ public class PaquetDeCarte
 	/**
 	 * Initialisation d'un paquet de 52 cartes
 	 */
-	public PaquetDeCarte()
+	public PaquetDeCartes()
 	{
 		int i=0,c,v;
 		this.paquet = new Carte[52];
-		this.cartesRestantesDuPaquet = 52;
+		this.cartesRestantes = 52;
 		for(c=1;c<=4;c++)
 		{
 			for(v=1;v<=13;v++)
@@ -65,6 +62,6 @@ public class PaquetDeCarte
 	 */
 	public int getCartesRestantesPaquet() 
 	{
-		return cartesRestantesDuPaquet;
+		return cartesRestantes;
 	}
 }

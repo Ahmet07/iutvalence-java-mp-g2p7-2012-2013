@@ -11,8 +11,7 @@ public class Joueur
 	/**
 	 * nom identifiant chaque joueur lors d'une partie
 	 */
-	// FIXME (FIXED) cela ne peut pas être une constante
-	private String nomJoueur;
+	private String nom;
 	
 	/**
 	 * Nombre de jetons que le joueur possède au début de la partie.
@@ -22,8 +21,7 @@ public class Joueur
 	/**
 	 * Les deux cartes qui composent la main du joueur, différentes à chaque tour.
 	 */
-	// FIXME (FIXED) respecter les conventions d'écriture
-	private MainJoueur cartesJoueur;
+	private MainJoueur cartes;
 	
 	
 	/**
@@ -31,15 +29,14 @@ public class Joueur
 	 */
 	private int mise;
 	
-	// FIXME (FIXED) corriger le commentaire (à discuter)
 	/**
-	 * Instancie un objet de la classe Joueur
+	 * Instancie un objet de la classe Joueur, de pseudonyme donné
 	 * @param nom représente le pseudo du Joueur 
 	 */
 	public Joueur(String nom)
 	{
-		this.nomJoueur = nom;
-		this.cartesJoueur = new MainJoueur();
+		this.nom = nom;
+		this.cartes = new MainJoueur();
 		this.nbJetons = 200;
 		this.mise = 0;
 	}

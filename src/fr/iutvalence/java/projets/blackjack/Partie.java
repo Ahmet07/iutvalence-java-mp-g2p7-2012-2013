@@ -1,7 +1,7 @@
 package fr.iutvalence.java.projets.blackjack;
 
 import java.util.Random;
-import fr.iutvalence.java.projets.blackjack.PaquetDeCarte;
+import fr.iutvalence.java.projets.blackjack.PaquetDeCartes;
 
 /**
  *La classe Partie va contenir
@@ -12,7 +12,7 @@ import fr.iutvalence.java.projets.blackjack.PaquetDeCarte;
 public class Partie
 {
     
-	private PaquetDeCarte pioche;
+	private PaquetDeCartes pioche;
 	
 	private static Random aleatoire = new Random(System.currentTimeMillis());
 	

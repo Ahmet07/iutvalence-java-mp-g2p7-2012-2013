@@ -27,12 +27,11 @@ public class Couleur
 	 */
 	private final int couleur;
 	
-	// FIXME (FIXED) écrire le commentaire
+	// FIXME corriger le commentaire
 	/**
 	 * permet de retourner la couleur de la carte par rapport à une valeur
 	 */
-	//consructuers
-	// FIXME utiliser les exceptions
+	
 	public Couleur (int v) throws CouleurInvalideException
 	{
 		if ((v>0) && (v<5))
@@ -41,8 +40,6 @@ public class Couleur
 			throw new CouleurInvalideException();
 		
 	}
-	
-	// FIXME (FIXED) définir un accesseur en lecture pour l'attribut
 
     /**
      * @return permet de retourner la couleur de la carte.
@@ -52,15 +49,15 @@ public class Couleur
       return couleur;
     }        
 	
-	// FIXME (FIXED) compléter/corriger le commentaire (ça ne veut rien dire)
+	// FIXME compléter/corriger le commentaire (ça ne veut rien dire)
 	/**
 	 * On attribut une couleur à la carte par rapport à sa valeur
 	 * @param v 
 	 * 
 	 */
-	private String toString(int v)
+	private String toString()
 	{
-	if (v == 1) return "Carreau";
+	if (this.couleur == 1) return "Carreau";
 	if (v == 2) return "Coeur";
 	if (v == 3) return "Pique";
 	if (v == 4) return "Trèfle";
