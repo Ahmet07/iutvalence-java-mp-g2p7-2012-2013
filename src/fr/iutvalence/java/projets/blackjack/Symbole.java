@@ -6,108 +6,96 @@ package fr.iutvalence.java.projets.blackjack;
  * @author ozdemira
  * 
  */
-public class Symbole
+public enum Symbole
 {
 	/**
-	 * Valeur de la carte ( 1 pour As, 2 pour DEUX ...)
+	 * Déclaration de la couleur AS
 	 */
+	AS, 
 	
-
 	/**
-	 * Tableau de caractères comportant le symoble des diffèrentes cartes
+	 * Déclaration de la couleur ROI
 	 */
-	public final static  String[] NOM_SYMBOLE = {"AS", "2",
-	"3", "4", "5", "6", "7", "8", "9", "10", "VALET", "DAME", "ROI" };
+	ROI,
 	
-	
-	// FIXME commentaire
-	private final int symbole;
-
-	// FIXME commentaire
-	private final int valeur;
-	
-	// FIXME commentaire
-	public Carte(COULEUR couleur, int symbole) {
-		this.couleur = couleur;
-		this.symbole = (symbole >= 1 && symbole <= 13 ? symbole : 0);
-		this.valeur = this.symbole;
-	}
-
-	// FIXME commentaire
-	// FIXME supprimer un des 2 constructeurs
-	public Carte(COULEUR couleur, int valeur) {
-		this.couleur = couleur;
-		this.symbole = (symbole >= 1 && symbole <= 13 ? symbole : 0);
-		this.valeur = valeur;
-	}
-	
-	// FIXME commentaire
-	public COULEUR getCouleur() {
-		return this.couleur;
-	}
-
-	// FIXME commentaire
-	public int getSymbole() {
-		return this.symbole;
-	}
-
-	// FIXME commentaire
-	public int getValeur() {
-		return this.valeur;
-	}
-
-	
-	
-	// FIXME utile ?
 	/**
-	 * Instancie un objet de la classe Symbole
+	 * Déclaration de la couleur DAME
+	 */
+	DAME,
+	
+	/**
+	 * Déclaration de la couleur VALET
+	 */
+	VALET,
+	
+	/**
+	 * Déclaration de la couleur DIX
+	 */
+	DIX,
+	
+	/**
+	 * Déclaration de la couleur NEUF
+	 */
+	NEUF,
+	
+	/**
+	 * Déclaration de la couleur HUIT
+	 */
+	HUIT,
+	
+	/**
+	 * Déclaration de la couleur SEPT
+	 */
+	SEPT,
+	
+	/**
+	 * Déclaration de la couleur SIX
+	 */
+	SIX, 
+	
+	/**
+	 * Déclaration de la couleur CINQ
+	 */
+	CINQ,
+	
+	/**
+	 * Déclaration de la couleur QUATRE
+	 */
+	QUATRE,
+	
+	/**
+	 * Déclaration de la couleur TROIS
+	 */
+	TROIS,
+	
+	/**
+	 * Déclaration de la couleur DEUX
+	 */
+	DEUX;
+	
+	
+	
+	/**
+	 * Retourne la couleur sous forme de chaine de caractères
 	 * 
-	 * @param s
-	 *            représente le symbole de la carte
-	 * @param v
-	 *            représente la valeur de la carte
 	 */
-	public Symbole(char s, int v) throws SymboleInvalideException
+	public String toString()
 	{
-		if ((v > 0) && (v < 14))
-		{
-			this.symbole = s;
-			this.valeur = v;
-		}
-		else
-			throw new SymboleInvalideException();
-	}
+	if (this.equals(AS)) return "As";
+	if (this.equals(ROI)) return "Roi";
+	if (this.equals(DAME)) return "Dame";
+	if (this.equals(VALET)) return "Valet";
+	if (this.equals(DIX)) return "10";
+	if (this.equals(NEUF)) return "9";
+	if (this.equals(HUIT)) return "8";
+	if (this.equals(SEPT)) return "7";
+	if (this.equals(SIX)) return "6";
+	if (this.equals(CINQ)) return "5";
+	if (this.equals(QUATRE)) return "4";
+	if (this.equals(TROIS)) return "3";
+	if (this.equals(DEUX)) return "2";
 	
-	
-	// FIXME commentaire
-	public String getNomCouleur() {
-		switch (this.couleur) {
-			case PIQUE:
-				return Carte.NOMS_COULEURS[0];
-			case COEUR:
-				return Carte.NOMS_COULEURS[1];
-			case CARREAU:
-				return Carte.NOMS_COULEURS[2];
-			case TREFLE:
-				return Carte.NOMS_COULEURS[3];
-		}
-		return "<erreur, la couleur de carte n'est pas correct>"; // impossible, mais nécessaire !
+	else 
+		return null;
 	}
-	
-	
-
-	/**
-	 * On retourne la carte si elle existe sinon, c'est que la valeur ne
-	 * correspond pas au symbole, on renvoit donc la valeur null.
-	 */
-	public String getNomSymbole() {
-		return Carte.NOM_SYMBOLE[this.symbole];
-	}
-
-	// FIXME commentaire
-	public String getNomComplet() {
-	    if (getSymbole()==0) return getNomSymbole();
-	    else return getNomSymbole() + " de " + getNomCouleur();
-	}
-
 }

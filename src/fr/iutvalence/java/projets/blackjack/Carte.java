@@ -32,9 +32,52 @@ public class Carte
 	public Carte(Couleur c,Symbole s,int v)
 	{
 		this.couleur = c;
-		this.symbole = s;				
-		this.valeur  = v;
+		this.symbole = s;
+		
+		 switch(this.symbole)
+		 {
+	     case AS:
+	    	 this.valeur=1;
+	    	 break;
+	     case DEUX:
+	    	 this.valeur=2;
+	    	 break;
+	     case TROIS:
+	    	 this.valeur=3;
+	    	 break;
+	     case QUATRE:
+	    	 this.valeur=4;
+	    	 break;
+	     case CINQ:
+	    	 this.valeur=5;
+	    	 break;
+	     case SIX:
+	    	 this.valeur=6;
+	    	 break;
+	     case SEPT:
+	    	 this.valeur=7;
+	    	 break;
+	     case HUIT:
+	    	 this.valeur=8;
+	    	 break;
+	     case NEUF:
+	    	 this.valeur=9;
+	    	 break;
+	     case DIX:
+	    	 this.valeur=10;
+	    	 break;
+	     case VALET:
+	    	 this.valeur=10;
+	    	 break;
+	     case DAME:
+	    	 this.valeur=10;
+	    	 break;
+	     case ROI:
+	    	 this.valeur=10;
+	    	 break;
+		 }
 	}
+		 	 
 	
 	/**
 	 *Permet de visualiser une carte sous forme de chaine de caracteres 
