@@ -19,7 +19,8 @@ public class CreerCarte
 		 */
 		public static void main (String[] args)
 		{
-			Carte c = new Carte( , , 11);
+			Carte c = new Carte(Couleur.COEUR, Symbole.VALET, 10);
 			System.out.println(c);
+			
 		}
 }

@@ -75,6 +75,7 @@ public class Carte
 	     case ROI:
 	    	 this.valeur=10;
 	    	 break;
+	     default: this.valeur = 0;
 		 }
 	}
 		 	 
@@ -88,7 +89,48 @@ public class Carte
 	{
 		String s = "Carte de couleur "+ this.couleur;
 		s += " et de symbole " + this.symbole;
+		s +=" (valeur " + this.valeur +")";
 		return s;
 	}
 
+
+
+	/**
+	 * @param c1 Carte à comparer avec deuxième
+	 * @param c2 Carte à comparer avec la première
+	 * @return une valeur permettant de savoir quelle carte est supérieur 
+	 * à l'autre, ou si elles sont égales.
+	 */
+	public static int comparerCartes(Carte c1, Carte c2)
+	{
+		if (c1.valeur > c2.valeur) return 1;
+		if (c1.valeur < c2.valeur) return -1;
+		else return 0;
+	}
+	
+
+	
+	/**
+	 * @return le symbole de la carte
+	 */
+	public  Symbole getsymbole()
+	{return Carte.symbole;}
+
+	
+	/**
+	 * @return la couleur de la carte
+	 */
+	public Couleur getcouleur()
+	{return Carte.couleur;}
+	
+	
+	/**
+	 * @return la valeur de la carte
+	 */
+	public int getvaleur()
+	{return Carte.valeur;}
+	
+	
 }
+
+
