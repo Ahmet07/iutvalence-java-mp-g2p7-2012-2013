@@ -29,7 +29,6 @@ public enum Couleur
 	TREFLE;
 	
 	
-	// FIXME (FIXED) compléter/corriger le commentaire (ça ne veut rien dire)
 	/**
 	 * Retourne la couleur sous forme de chaine de caractères
 	 * 
