@@ -8,72 +8,98 @@ package fr.iutvalence.java.projets.blackjack;
  */
 public enum Symbole
 {
-	/**
-	 * Déclaration de la couleur AS
-	 */
-	AS, 
 	
 	/**
-	 * Déclaration de la couleur ROI
+	 * Déclaration de le symbole AS
 	 */
-	ROI,
+	AS_ONZE(11), 
+	
 	
 	/**
-	 * Déclaration de la couleur DAME
+	 * Déclaration de le symbole ROI
 	 */
-	DAME,
+	ROI(10),
 	
 	/**
-	 * Déclaration de la couleur VALET
+	 * Déclaration de le symbole DAME
 	 */
-	VALET,
+	DAME(10),
 	
 	/**
-	 * Déclaration de la couleur DIX
+	 * Déclaration de le symbole VALET
 	 */
-	DIX,
+	VALET(10),
 	
 	/**
-	 * Déclaration de la couleur NEUF
+	 * Déclaration de le symbole DIX
 	 */
-	NEUF,
+	DIX(10),
 	
 	/**
-	 * Déclaration de la couleur HUIT
+	 * Déclaration de le symbole NEUF
 	 */
-	HUIT,
+	NEUF(9),
 	
 	/**
-	 * Déclaration de la couleur SEPT
+	 * Déclaration de le symbole HUIT
 	 */
-	SEPT,
+	HUIT(8),
 	
 	/**
-	 * Déclaration de la couleur SIX
+	 * Déclaration de le symbole SEPT
 	 */
-	SIX, 
+	SEPT(7),
 	
 	/**
-	 * Déclaration de la couleur CINQ
+	 * Déclaration de le symbole SIX
 	 */
-	CINQ,
+	SIX(6), 
 	
 	/**
-	 * Déclaration de la couleur QUATRE
+	 * Déclaration de le symbole CINQ
 	 */
-	QUATRE,
+	CINQ(5),
 	
 	/**
-	 * Déclaration de la couleur TROIS
+	 * Déclaration de le symbole QUATRE
 	 */
-	TROIS,
+	QUATRE(4),
 	
 	/**
-	 * Déclaration de la couleur DEUX
+	 * Déclaration de le symbole TROIS
 	 */
-	DEUX;
+	TROIS(3),
 	
+	/**
+	 * Déclaration de le symbole DEUX
+	 */
+	DEUX(2),
 	
+	/**
+	 * Déclaration de le symbole AS
+	 */
+	AS(1);
+	
+	/**
+	 * 
+	 */
+	private int value;
+
+	/**
+	 * @param v
+	 */
+	private Symbole(int v)
+	{
+		this.value = v;
+	}	
+	
+	/**
+	 * @return la valeur
+	 */
+	public int getValue()
+	{
+		return this.value;
+	}
 	
 	/**
 	 * Retourne la couleur sous forme de chaine de caractères
@@ -81,7 +107,7 @@ public enum Symbole
 	 */
 	public String toString()
 	{
-	if (this.equals(AS)) return "As";
+	if (this.equals(AS_ONZE)) return "As(11)";
 	if (this.equals(ROI)) return "Roi";
 	if (this.equals(DAME)) return "Dame";
 	if (this.equals(VALET)) return "Valet";
@@ -94,6 +120,7 @@ public enum Symbole
 	if (this.equals(QUATRE)) return "4";
 	if (this.equals(TROIS)) return "3";
 	if (this.equals(DEUX)) return "2";
+	if (this.equals(AS)) return "As";
 	
 	else 
 		return null;

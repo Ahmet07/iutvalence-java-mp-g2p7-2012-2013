@@ -1,6 +1,5 @@
 package fr.iutvalence.java.projets.blackjack;
-
-import java.util.Random;
+import java.util.Scanner;
 import fr.iutvalence.java.projets.blackjack.PaquetDeCartes;
 import fr.iutvalence.java.projets.blackjack.Joueur;
 
@@ -12,53 +11,169 @@ import fr.iutvalence.java.projets.blackjack.Joueur;
  */
 public class Partie
 {
-    
-	private PaquetDeCartes pioche;
-	
-	private static Random aleatoire = new Random(System.currentTimeMillis());
-	
-	// FIXME attributs, constructeurs, méthodes ?
-	
-	
 	/**
-	 * Retourne la carte du dessus du paquet de carte en la
-	 * supprimant de celui-ci. Si le paquet de carte est vide retourne
-	 * null.
-	 * @param enleverLaCarte Faut-il extraire la carte du paquet de carte ?
-	 * @return La carte du dessus du paquet de carte ou null si celui-ci
-	 *         est vide
+	 * Nombre de joueurs minimum pour débuter une partie.
 	 */
-	public Carte tirerUneCarteDuPaquet() 
-	{
-		if (this.pioche.getCartesRestantesPaquet() > 0) 
-		{
-			Carte carte = (enleverLaCarte ? this.pioche.remove(this.pioche - 1)
-						                  : this.pioche.get(this.pioche - 1));
-			return carte;
-		}
-		else 
-		{
-			return null;
-		}
-	
-	}
-	
+	private final static int NB_JOUEURS_MIN = 1;
+
+
 	/**
-	 * Fonction qui distribut deux cartes au hasard (prise dans la pioche) 
-	 * à chaque joueur pour créer leur main.
-	 * @return la main de chaque joueur qui est composé de deux cartes.
+	 * Nombre de joueurs maximum dans la partie.
 	 */
-	
-	
-	
-	public Carte distribuerCartes()
+	private final static int NB_JOUEURS_MAX = 6;
+
+
+
+	/**
+	 * Les joueurs de la partie seront stocké dans un tableau de joueurs.
+	 */
+	private Joueur[] joueur;
+
+
+	/**
+	 * Nombre de joueurs présents dans la partie
+	 */
+	private int nbJoueurs;
+
+
+	/**
+	 * début de la partie, on initialise le tabluea de joueur pour y mettre des joueurs
+	 */
+	public Partie ()
 	{
-	int i;
-	for(i=1; i=nbjoueur; i++)
+		this.joueur = new Joueur[NB_JOUEURS_MAX];
+		this.nbJoueurs = 0;
+
+	}
+
+
+	/**
+	 * Permet d'ajouter un joueur
+	 * @param j : Le nom du joueur à rajouter dans la partie.
+	 * @throws NbDeJoueursException : Nombre max de joueurs atteint.
+	 */
+	public void addJoueur (Joueur j) throws NbDeJoueursException
 	{
-		MainJoueur = tirerUneCarteDuPaquet();
-		MainJoueur = tirerUneCarteDuPaquet();
+		if (this.nbJoueurs > NB_JOUEURS_MAX)
+			throw new NbDeJoueursException();
+
+		this.joueur[this.nbJoueurs] = j;
+		this.nbJoueurs++;
+
 	}
+
+
+
+
+	/**
+	 * Permet de démarrer la partie de poker.
+	 * @throws NbDeJoueursException : Nb de joueurs insuffisant ou trop élevé.
+	 * @throws PlusDeCarteException :  
+	 * @throws PaquetDeCartesInvalideException 
+	 */
+	public void demarrer() throws NbDeJoueursException, PlusDeCarteException, PaquetDeCartesInvalideException
+	{
+		if ((this.nbJoueurs < NB_JOUEURS_MIN) || (this.nbJoueurs > NB_JOUEURS_MAX))
+			throw new NbDeJoueursException();
+
+		int nbPerdants = 0;
+
+		PaquetDeCartes p = new PaquetDeCartes();
+
+		while (nbPerdants != (this.nbJoueurs- 1))
+		{
+			for (int i = 0; i < this.nbJoueurs; i++)
+			{
+				if (this.joueur[i].getPerdu() == false)
+				{
+					this.joueur[i].donnerCarte(p.tirerUneCarteAuHasard());
+					this.joueur[i].donnerCarte(p.tirerUneCarteAuHasard());
+					System.out.println(this.joueur[0].getNom() + " possède les cartes :\n" +
+							this.joueur[0].getCartes()[0] + "\n" +
+							this.joueur[0].getCartes()[1]+ "\n"
+							+ " valeur total des cartes: "+
+							this.joueur[0].scoreMain()+ "\n" +
+							" argent disponible: " +
+							this.joueur[0].getNbArgent()+ "\n");
+				}
+			}
+
+
+			while ( nbPerdants < this.nbJoueurs)
+			{
+
+				for (int i = 0; i < this.nbJoueurs; i++)
+				{
+					if (this.joueur[i].getPerdu() == false)
+						// Cas ou le joueur n'a pas encore perdu.
+					{
+						if (this.joueur[i].getNbArgent() == 0)
+							// Cas ou le joueur n'a plus d'argent.
+						{
+							this.joueur[i].setPerdu(true);
+							nbPerdants++;
+						}
+					}
+				}
+
+				p.reinitialiserPaquet();
+
+			}
+		}
 	}
-	
+
+
+
+
+	/**
+	 * Correspond à un tour de mise au poker.
+	 */
+	public void tourDeMise()
+	{
+		int plusGrosseMise = 50;
+
+
+
+		for (int j = 0; j < this.nbJoueurs; j++)
+
+		{
+			if (this.joueur[j].getPerdu() == false)
+
+			{
+				if (this.joueur[j].getMise() != plusGrosseMise)
+				{
+
+					Scanner sc = new Scanner(System.in);
+					System.out.println("Il vous reste " + this.joueur[j].getNbArgent() + " argent.");
+					System.out.println(this.joueur[j].getNom() +", quelle action voulez vous réaliser ?\n" +
+							"	1 - Miser " + (plusGrosseMise - this.joueur[j].getMise()) +
+							"	2 - Coucher");
+					int rep = sc.nextInt();
+
+					while (rep != 1 & rep != 2)
+					{
+						rep = sc.nextInt();
+					}
+
+					int argentEnJeu = 0;
+
+					if (rep == 2)
+					{
+						argentEnJeu = this.joueur[j].suivre(plusGrosseMise - this.joueur[j].getNbArgent());
+					}
+
+
+					if (rep == 2)
+					{
+						this.joueur[j].setCoucher(true);
+					}
+					System.out.println("Le joueur s'est couché \n");
+
+				}
+			}
+		}
+	}
 }
+
+
+
